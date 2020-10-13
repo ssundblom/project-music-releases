@@ -2,14 +2,19 @@ import React from 'react'
 import data from './data.json'
 import { Artist } from 'Artist.js'
 
-export const Album = props => {
+export const Album = (props) => {
+  console.log(props)
   return (
-    <div>
-      Album: {props.name}
-      {data.albums.items.map(artist => {
-        console.log(artist.artists[0].name)
-        return <Artist key={artist.artists[0].name} name={artist.artists[0].name} />
-      })}
-    </div>
+    <article className="album">
+      < a href={props.link} target="_blank">
+        <img src={props.image} alt="cover"></img>
+      </a>
+      <h1>{props.name}</h1>
+      <div>
+        {props.artists.map(artist => {
+          return <Artist key={artist.id} name={artist.name} link={artist.external_urls.spotify} />
+        })}
+      </div>
+    </article>
   )
 }
