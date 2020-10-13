@@ -5,9 +5,63 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #131313;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.albumContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 40px;
+  justify-content: space-evenly;
+
+}
+
+.album {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.album img {
+  width: 100%;
+}
+
+.album h1 {
+  font-size: 14px;
+  font-family: Helvetica;
+  color: #ffffff;
+}
+
+.artist h2 {
+  font-size: 14px;
+  font-family: Helvetica;
+  color:  #a0a0a0;
+}
+
+.artist a {
+  text-decoration: none;
+}
+
+.artist a:hover, .artist h2:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+@media (min-width: 650px) {
+  .album {
+    width: 30%;
+  }
+    
+}
+
+@media (min-width: 900px) {
+  .album {
+    width: 22%;
+    
+  }
 }
