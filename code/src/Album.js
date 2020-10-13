@@ -1,14 +1,27 @@
 import React from 'react'
-import data from './data.json'
 import { Artist } from 'Artist.js'
+import { ReactComponent as Heart } from './icons/heart.svg'
+import { ReactComponent as Play } from './icons/play.svg'
+import { ReactComponent as Dots } from './icons/dots.svg'
 
 export const Album = (props) => {
   console.log(props)
   return (
     <article className="album">
+
       < a href={props.link} target="_blank">
-        <img src={props.image} alt="cover"></img>
+
+        <div className="coverImage">
+          <img src={props.image} alt="cover"></img>
+          <div className="overlay">
+            <Heart className="heart"/>
+            <Play className="play" />
+            <Dots className="dots" /> 
+          </div>
+        </div>
+
       </a>
+
       <h1>{props.name}</h1>
       <div>
         {props.artists.map(artist => {
@@ -18,3 +31,4 @@ export const Album = (props) => {
     </article>
   )
 }
+
