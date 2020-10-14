@@ -5,7 +5,6 @@ import { ReactComponent as Play } from './icons/play.svg'
 import { ReactComponent as Dots } from './icons/dots.svg'
 
 export const Album = (props) => {
-  console.log(props)
   return (
     <article className="album">
 
@@ -21,8 +20,9 @@ export const Album = (props) => {
         </div>
 
       </a>
-
-      <h1>{props.name}</h1>
+      < a href={props.link} target="_blank">
+        <h1>{props.name}</h1>
+      </a>
       <div>
         {props.artists.map(artist => {
           return <Artist key={artist.id} name={artist.name} link={artist.external_urls.spotify} />
