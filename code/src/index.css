@@ -43,15 +43,16 @@ h3 {
   font-size: 14px;
   font-family: Helvetica;
   color: #ffffff;
+  margin-bottom: 5px;
 }
 
-.artist h2 {
+.artist li a {
   font-size: 14px;
   font-family: Helvetica;
   color: #a0a0a0;
 }
 
-.artist a:hover, .artist h2:hover {
+.artist a:hover {
   text-decoration: underline;
   color: white;
 }
@@ -117,8 +118,18 @@ h1:hover  {
 .heart:hover, .dots:hover {
   max-width: 15%;
   fill: white;
-
 }
+
+.artist, .artist li {
+  list-style-type: none; 
+  padding-left: 0;
+  display: inline;
+}
+.artist li:after { 
+  content: ", ";
+  color: #a0a0a0;
+}
+.artist li:last-child:after { content: "" }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .album {
