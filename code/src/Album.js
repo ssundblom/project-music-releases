@@ -11,9 +11,9 @@ export const Album = (props) => {
         <div className="coverImage">
           <img src={props.image} alt="cover"></img>
           <div className="overlay">
-            <Heart className="heart"/>
+            <Heart className="heart" />
             <Play className="play" />
-            <Dots className="dots" /> 
+            <Dots className="dots" />
           </div>
         </div>
       </a>
